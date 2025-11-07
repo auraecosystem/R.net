@@ -5,8 +5,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B9E15660-096F-45FB-82E3-3C21BBE986DF}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.9.0</Version>
+    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+    <Version>1.10.0</Version>
     <Copyright>(c) 2014-2020 Jean-Michel Perraud and others see https://github.com/jmp75/rdotnet/blob/master/License.txt</Copyright>
     <Description>A .NET interoperability library to access the R statistical language runtime from .NET languages. The library is designed for fast data exchange, in process.</Description>
     <!-- <Product>R.NET</Product> -->
@@ -48,6 +48,6 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
   </ItemGroup>
 </Project>

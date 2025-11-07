@@ -15,10 +15,10 @@ namespace RDotNet
             REngine.SetEnvironmentVariables();
         }
 
-        [Fact(Skip = "This does not pass - kept as is until dynamic-interop changes the exception type to ArgumentException")]
+        [Fact]
         public void TestCreateInstanceWithWrongDllName()
         {
-            Assert.Throws<ArgumentException>(
+            Assert.Throws<DllNotFoundException>(
                 () => {
                     TestREngine.CreateTestEngine("R.NET", "NotExist.dll");
                 });

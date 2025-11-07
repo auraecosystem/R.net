@@ -6,8 +6,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>541e564c-9414-4711-813e-697c1e9bd494</ProjectGuid>
     <OutputType>Library</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <Version>1.9.0</Version>
+    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+    <Version>1.10.0</Version>
     <Copyright>(c) 2014-2020 Jean-Michel Perraud and others see https://github.com/jmp75/rdotnet/blob/master/License.txt</Copyright>
     <RepositoryUrl>https://github.com/jmp75/rdotnet</RepositoryUrl>
     <PackageProjectUrl>https://github.com/jmp75/rdotnet</PackageProjectUrl>
@@ -26,7 +26,6 @@
     <Compile Include="MatrixTest.fs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="DynamicInterop" Version="0.9.1" />
     <PackageReference Include="FSharp.Core" Version="4.6.2" />
     <Reference Include="mscorlib" />
     <Reference Include="System" />

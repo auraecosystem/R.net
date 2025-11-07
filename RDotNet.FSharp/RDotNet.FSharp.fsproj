@@ -5,8 +5,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>fe745bfd-793d-4b05-b0ee-bea4d5e3c0a6</ProjectGuid>
     <OutputType>Library</OutputType>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.9.0</Version>
+    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+    <Version>1.10.0</Version>
     <Copyright>(c) 2014-2020 Jean-Michel Perraud and others see https://github.com/jmp75/rdotnet/blob/master/License.txt</Copyright>
    <Description>A .NET interoperability library to access the R statistical language runtime from .NET languages. The library is designed for fast data exchange, in process.</Description>
     <Product>R.NET</Product>
@@ -39,7 +39,6 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" /> -->
-    <PackageReference Include="DynamicInterop" Version="0.9.1" />
     <PackageReference Include="FSharp.Core" Version="4.6.2" />
     <ProjectReference Include="..\R.NET\RDotNet.csproj">
     </ProjectReference>

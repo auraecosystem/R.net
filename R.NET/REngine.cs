@@ -1,4 +1,5 @@
 using RDotNet.Devices;
+using RDotNet.DynamicInterop;
 using RDotNet.Internals;
 using RDotNet.NativeLibrary;
 using RDotNet.Utilities;
@@ -30,8 +31,7 @@ namespace RDotNet
     /// }
     /// </code>
     /// </example>
-    [SecurityPermission(SecurityAction.Demand, Flags = SecurityPermissionFlag.UnmanagedCode)]
-    public class REngine : DynamicInterop.UnmanagedDll
+    public class REngine : UnmanagedDll
     {
         /// <summary>
         /// Flag for working on pre or post R 3.5 and its ALTREP mode.  
@@ -1117,8 +1117,7 @@ namespace RDotNet
                 this.adapter.Dispose();
                 this.adapter = null;
             }
-            if (Disposed)
-                return;
+
             GC.KeepAlive(this.parameter);
             base.Dispose(disposing);
         }

@@ -28,13 +28,10 @@ using dotnet CLI fails to locate the dynamicinterop alpha package as well
 
 ```
 cd path\to\rdotnet.nativelibrary
-dotnet remove package DynamicInterop
-dotnet add package -s "C:\local\nuget" -f netstandard2.0 DynamicInterop
 ```
 
 It appeared I needed to do:
 ```
-nuget install -Prerelease DynamicInterop
 ```
 Note that I did not locate any CLI options for `dotnet add package` that would let me add the alpha package. [Has been reported by another](https://github.com/dotnet/cli/issues/8485)
 

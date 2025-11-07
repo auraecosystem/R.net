@@ -38,9 +38,6 @@ As an example:
 
 If using dotnet version prior to 2.1.3, [installing/restoring prerelease dependency packages is problematic](https://github.com/dotnet/cli/issues/8485). You may need to use
 
-```sh
-nuget install -Prerelease DynamicInterop -OutputDirectory packages
-```
 
 otherwise:
 
