@@ -1,8 +1,8 @@
-using DynamicInterop;
 using Xunit;
 using RDotNet.NativeLibrary;
 using System;
 using System.IO;
+using RDotNet.DynamicInterop;
 
 namespace RDotNet
 {

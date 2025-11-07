@@ -24,9 +24,6 @@ I don't have time to decypher the various workarounds; I'll stick to what used t
       <reference file="RDotNet.dll" />
       <reference file="RDotNet.NativeLibrary.dll" />
     </references>
-    <dependencies>
-      <dependency id="DynamicInterop" version="[0.9.1]" />
-    </dependencies>
     <frameworkAssemblies>
       <frameworkAssembly assemblyName="System.Numerics" />
     </frameworkAssemblies>

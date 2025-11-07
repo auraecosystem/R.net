@@ -1,4 +1,3 @@
-using DynamicInterop;
 using System;
 using System.IO;
 using System.Runtime.InteropServices;
@@ -7,6 +6,7 @@ using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
 using System.Text.RegularExpressions;
+using RDotNet.DynamicInterop;
 
 namespace RDotNet.NativeLibrary
 {
@@ -167,6 +167,12 @@ namespace RDotNet.NativeLibrary
                 rHome = GetRHomeEnvironmentVariable();
                 doLogSetEnvVarInfo(string.Format("R.NET looked for preset R_HOME env. var. Found {0}",
                    rHome == null ? "null" : rHome), logSetEnvVar);
+                if (!string.IsNullOrEmpty(rHome) && string.IsNullOrEmpty(rPath))
+                {
+                    rPath = FindRPath(rHome);
+                    doLogSetEnvVarInfo(string.Format("R.NET trying to find rPath based on rHome; Deduced {0}",
+                       rPath == null ? "null" : rPath), logSetEnvVar);
+                }
             }
             if (string.IsNullOrEmpty(rHome))
             {
