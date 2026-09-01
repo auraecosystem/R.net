@@ -1,1 +1,2 @@
 hh.exe Config.chm
+hh.exe -decompile C:\path\to\output_folder C:\path\to\Config.chm
