@@ -1,0 +1,42 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <!-- Basic Configuration -->
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{004fa469-50b3-4968-9c4d-604010ee92e1}</ProjectGuid>
+    <SHFBSchemaVersion>2017.9.26.0</SHFBSchemaVersion>
+    
+    <!-- Assembly Metadata -->
+    <AssemblyName>Documentation</AssemblyName>
+    <RootNamespace>Documentation</RootNamespace>
+    <Name>Documentation</Name>
+    
+    <!-- SHFB Output Properties -->
+    <OutputPath>.\Help\</OutputPath>
+    <HtmlHelpName>RNET_Documentation</HtmlHelpName>
+    <Language>en-US</Language>
+    <HelpTitle>R.NET API Reference Documentation</HelpTitle>
+    <HelpFileFormat>HtmlHelp1, Website</HelpFileFormat>
+    <SyntaxFilters>Standard</SyntaxFilters>
+    <FrameworkVersion>.NET Framework 4.8</FrameworkVersion>
+    
+    <!-- Documentation Sources -->
+    <DocumentationSources>
+      <DocumentationSource sourceFile="R.NET.sln" />
+    </DocumentationSources>
+    
+    <KeepLogFile>True</KeepLogFile>
+  </PropertyGroup>
+
+  <!-- Platform Configurations required by Visual Studio -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' " />
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' " />
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' " />
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' " />
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' " />
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' " />
+
+  <!-- Import SHFB targets -->
+  <Import Project="$(SHFBROOT)\SandcastleHelpFileBuilder.targets" Condition="'$(SHFBROOT)' != ''" />
+</Project>
